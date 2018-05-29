@@ -30,7 +30,8 @@ LDAP_PASS=false
 
 # A filter to use when searching for users
 # The user-provided user-name used to replace any occurrences of '${user}'
-LDAP_USER_FILTER=(&(uid=${user}))
+# LDAP_USER_FILTER=(&(uid=${user})) the old way
+LDAP-USER_FILTER=(&(SAMAccountName=${user}))
 
 # Set the LDAP version to use when connecting to the server.
 LDAP_VERSION=false
